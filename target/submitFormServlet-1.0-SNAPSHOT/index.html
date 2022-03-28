@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Form with Servlet</title>
+    <style>
+        .container{
+            width: 35%;
+            height: 400px;
+            margin: auto;
+            border: 1px solid black;
+            font-size: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+        }
+        td{
+            padding-bottom: 15px;
+        }
+        #myForm table tr td input{
+            font-size: 20px;
+        }
+        #CheckBox{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Form</h1>
+
+        <form id="myForm" action="RegisterServlet" method="post">
+            <table>
+                <tr>
+                    <td>Enter Your Name : </td>
+                    <td><input type="text" name="user_name" placeholder="Enter name"></td>
+                </tr>
+                <tr>
+                    <td>Enter Yor Password : </td>
+                    <td><input type="password" name="user_password" placeholder="Enter Password"></td>
+                </tr>
+                <tr>
+                    <td>Enter Your Email : </td>
+                    <td><input type="text" name="user_email" placeholder="Enter Email"></td>
+                </tr>
+                <tr>
+                    <td>Select Gender : </td>
+                    <td><input type="radio" name="user_gender" value="Male">Male &nbsp; &nbsp; <input type="radio" name="user_gender" value="Female">Female</td>
+                </tr>
+                <tr>
+                    <td>Select Your Course</td>
+                    <td>
+                        <select name="user_course">
+                            <option value="Java">Java</option>
+                            <option value="Php">Php</option>
+                            <option value="Python">Python</option>
+                            <option value="Android">Android</option>
+                        </select>
+                    </td>
+                    <tr>
+                        <td id="CheckBox"><input type="checkbox" value="checked" name="condition"></td>
+                        <td>Agree terms and Conditions</td>
+                    </tr>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit">Register</button>
+                        <button type="reset">Reset</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
